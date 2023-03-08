@@ -1,1 +1,1 @@
-# scriptie
+# Scriptie Algoritme Register
