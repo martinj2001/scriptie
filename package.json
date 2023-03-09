@@ -1,0 +1,26 @@
+{
+  "name": "scriptie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinj2001/scriptie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinj2001/scriptie/issues"
+  },
+  "homepage": "https://github.com/martinj2001/scriptie#readme",
+  "devDependencies": {
+    "apexcharts": "^3.37.1"
+  },
+  "dependencies": {
+    "vue": "^2.7.14",
+    "vue-apexcharts": "^1.6.2"
+  }
+}
