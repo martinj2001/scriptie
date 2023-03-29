@@ -4,7 +4,9 @@ from .scores.completeness import Completeness
 
 class ScoreValue():
     def __init__(self, score: Score) -> None:
-        self.completeness = score.completeness
+        self.completeness:Completeness = score.completeness        
     
-    def toJSON(self):
-        return self.__dict__
+    def to_dict(self):
+        return {'completeness' : self.completeness.__dict__}
+        
+        

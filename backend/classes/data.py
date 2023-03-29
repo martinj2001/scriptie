@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import os 
 from typing import Optional
+import pandas 
+
 class Data:
     
     def __init__(self) -> None:
@@ -26,4 +28,10 @@ class Data:
             dict: dict with the found record. Will return empty dict if not found
         """        
         return self.df.iloc[[id]].to_dict(orient=self.orient)[0] if id in self.df.index else {}
+    
+    def get_all_records_as_dataframe(self) -> pandas.DataFrame:
+        return self.df
+    
+    def get_record_by_id_as_dataframe(self, id:int) -> pandas.DataFrame:
+        return self.df.iloc[[id]]
     

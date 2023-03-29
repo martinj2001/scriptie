@@ -1,13 +1,12 @@
 import pandas as pd
 from .score import Score
 from .score_value import ScoreValue
+import json, jsonpickle
+import pandas
 
 class Scorer:
-    
-    def __init__(self, data: pd.DataFrame) -> None:
-        self.data = data
-
-    def get_overall_score(self):
-        return ScoreValue(Score(self.data))
+    @staticmethod
+    def get_score(data:pandas.DataFrame):
+        return ScoreValue(Score(data)).to_dict()
     
     

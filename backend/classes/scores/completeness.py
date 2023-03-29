@@ -1,4 +1,6 @@
-class Completeness():
+class Completeness(dict):
     
-    def __init__(self, emptyValues:float) -> None:
-        self.emptyValues = emptyValues
+    def __init__(self) -> None:
+        self.emptyValuesPercentage:float = 0
+        self.emptyValuesPerColumn:dict = {}
+        self.emptyValuesPerOrganisation:dict = {}
