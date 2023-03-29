@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <h1>Algoritme Register Dashboard</h1>
-    <HelloWorld />
+    <HomePage />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './components/HomePage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HomePage
   }
 }
 </script>
