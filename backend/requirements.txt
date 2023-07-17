@@ -5,3 +5,6 @@ pandas
 orjson
 requests
 jsonpickle
+validators
+email-validator
+textstat

@@ -7,7 +7,7 @@ import pandas
 class Data:
     
     def __init__(self) -> None:
-        self.df = pd.read_csv('./data/algoritmeregister_20230202.csv')
+        self.df = pd.read_csv('./data/algoritmeregister_20230523.csv')
         self.orient = 'records'
         
     def get_all_records(self) -> dict:
@@ -29,9 +29,21 @@ class Data:
         """        
         return self.df.iloc[[id]].to_dict(orient=self.orient)[0] if id in self.df.index else {}
     
-    def get_all_records_as_dataframe(self) -> pandas.DataFrame:
-        return self.df
+    def get_all_records_as_dataframe(self, organizations = None, fields = None) -> pandas.DataFrame:
+        df = self.df
+        if organizations is not None:
+            print(organizations)
+            df = df.loc[df['organization'].isin(organizations)]
+        if fields is not None:
+            df = df[fields]
+        return df
     
     def get_record_by_id_as_dataframe(self, id:int) -> pandas.DataFrame:
         return self.df.iloc[[id]]
+    
+    def get_all_unique_organizations(self) -> list:        
+        return list(self.df['organization'].unique())
+    
+    def get_all_fields(self) -> list:
+        return list(self.df.columns)
     

@@ -7,6 +7,10 @@
 <script>
 import HomePage from './components/HomePage.vue'
 
+const routes = {
+    '/' : HomePage
+}
+
 export default {
   name: 'App',
   components: {
