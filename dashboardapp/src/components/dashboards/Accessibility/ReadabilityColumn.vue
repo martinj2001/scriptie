@@ -41,7 +41,7 @@
         },
         xaxis: {
           title: {
-            text: 'Kolom'
+            text: 'Kolomnaam'
           },
           labels: {
             rotate: -45,
